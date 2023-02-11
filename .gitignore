@@ -1,3 +1,4 @@
 
+*.tar
 /cache
 /node_modules

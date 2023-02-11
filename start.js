@@ -3,6 +3,7 @@
 import { dirname, resolve } from "path";
 import { fileURLToPath } from "url";
 import { scrape_tiles } from "./lib/scraper.js";
+import { merge_tiles_to_layers } from "./lib/vector_tiles.js";
 import { } from "big-data-tools";
 
 start()
@@ -18,8 +19,9 @@ async function start() {
 	}
 
 	CONFIG.tiles_folder = resolve(__dirname, "cache", CONFIG.name, 'tiles');
+	CONFIG.geojson_folder = resolve(__dirname, "cache", CONFIG.name, 'geojson');
 
 	await scrape_tiles(CONFIG);
-	await merge_tiles_to_layers();
+	await merge_tiles_to_layers(CONFIG);
 	await cleanup_layers();
 }
