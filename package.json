@@ -1,0 +1,19 @@
+{
+  "name": "basemap-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Kreil <github@michael-kreil.de> (https://github.com/MichaelKreil)",
+  "license": "MIT",
+  "dependencies": {
+    "big-data-tools": "^1.4.0"
+  }
+}
