@@ -2,6 +2,7 @@
 
 import { dirname, resolve } from "path";
 import { fileURLToPath } from "url";
+import { mkdirSync } from "fs";
 import { scrape_tiles } from "./lib/scraper.js";
 import { merge_tiles_to_layers } from "./lib/vector_tiles.js";
 import { } from "big-data-tools";
