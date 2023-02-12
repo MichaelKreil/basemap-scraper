@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import { mkdirSync } from "fs";
 import { scrape_tiles } from "./lib/scraper.js";
 import { merge_tiles_to_layers } from "./lib/vector_tiles.js";
-import { } from "big-data-tools";
+import { cleanup_layers } from "./lib/gdal.js";
 
 start()
 
@@ -27,5 +27,5 @@ async function start() {
 
 	await scrape_tiles(CONFIG);
 	await merge_tiles_to_layers(CONFIG);
-	await cleanup_layers();
+	await cleanup_layers(CONFIG);
 }
