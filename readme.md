@@ -4,7 +4,7 @@
 
 needs:
 - node.js with npm
-- ogr2ogr
+- ogr2ogr (gdal)
 
 ```bash
 npm i
