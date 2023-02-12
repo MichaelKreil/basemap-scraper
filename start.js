@@ -19,7 +19,7 @@ async function start() {
 		tiles_url: 'https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/tiles/v1/bm_web_de_3857/{z}/{x}/{y}.pbf',
 	}
 
-	'1_tiles,2_geojson,3_gpkg,4_geojson,5_gpkg'.split(',').forEach(name => {
+	'1_tiles,2_geojson,3_gpkg,4_gpkg'.split(',').forEach(name => {
 		let folder = resolve(__dirname, "cache", CONFIG.name, name);
 		mkdirSync(folder, { recursive: true });
 		CONFIG['folder'+name] = folder;
